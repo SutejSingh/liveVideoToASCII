@@ -1,34 +1,86 @@
 html,
 body {
-  margin: 0;
-  padding: 0;
-  background-color: #000;
-  font-family: "Courier";
-  color: rgb(255, 255, 255);
-  /* font-size: 5pt;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    font-family: "Courier";
+    color: rgb(255, 255, 255);
+    /* font-size: 5pt;
   line-height: 4pt; */
 }
 
 canvas {
-  display: block;
+    display: block;
 }
 
-h1, h3{
-  padding-left: 2%;
+h1,
+h3 {
+    padding-left: 2%;
 }
 
-.col-md-2{
-  padding: 30px;
+.col-md-2 {
+    padding: 30px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 75%;
+    height: 10%;
+    background: #000;
+    outline: none;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 8px;
+}
+
+
+/* for chrome/safari */
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 8%;
+    height: 30px;
+    background: #000;
+    cursor: pointer;
+    border: 2px solid rgb(246, 246, 246);
+    border-radius: 4px;
+}
+
+
+/* for firefox */
+
+.slider::-moz-range-thumb {
+    width: 75%;
+    height: 10%;
+    background: #000;
+    cursor: pointer;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 4px;
 }
 
 #videoOut {
-  margin: 10px;
-  padding: 10px;
-  background-color: #000;
-  font-family: "Courier";
-  color: rgb(255, 255, 255);
-  font-size: 5pt;
-  line-height: 4pt;
-  display: flex;
-  justify-content: center;
+    margin: 10px;
+    padding: 10px;
+    background-color: #000;
+    font-family: "Courier";
+    color: rgb(255, 255, 255);
+    font-size: 5pt;
+    line-height: 4pt;
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 576px) {
+    h1 {
+        font-size: 20px;
+    }
+    h3 {
+        font-size: 15px;
+    }
+    body {
+        font-size: 10px;
+    }
+    .col-md-2 {
+        padding: 10px;
+    }
 }
